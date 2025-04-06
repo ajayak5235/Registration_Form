@@ -43,7 +43,7 @@ const registerUser = async (req, res) => {
     // Save the user to the database
     await user.save();
 
-    res.json({ message: 'Registration Successfull Data', data: user });
+    res.json({ message: 'Registration data', data: user });
   } catch (error) {
     console.error('Error saving user:', error);
     res.status(400).json({ message: 'Registration failed', error: error.message });
